@@ -12,7 +12,7 @@ export default class Post extends Component {
     };
   }
   async componentDidMount() {
-    const { data } = await axios.get(
+    const data = await axios.get(
       `/api/post/${this.props.match.params.postId}`,
     );
     this.setState({ post: data });
